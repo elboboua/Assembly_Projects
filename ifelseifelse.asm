@@ -1,11 +1,6 @@
-TITLE Program Template     (template.asm)
+TITLE IF_ELSEIF_ELSE (ifelseifelse.asm)
 
-; Author:
-; Last Modified:
-; OSU email address: 
-; Course number/section:
-; Project Number:                 Due Date:
-; Description:
+; Description: A program to practice if, else if, and else in assembly
 
 INCLUDE Irvine32.inc
 
@@ -34,16 +29,17 @@ main PROC
 	call	ReadInt
 	mov		age, al
 
-	cmp		al, adult
-	jge		adult_message
+	cmp		al, adult		
+	jge		adult_message		; if adult print adult message
 	cmp		al, driver
-	jge		driver_message
-	jmp		baby_message
+	jge		driver_message		; else if driver print driver message
+	jmp		baby_message		; else print baby message
 
 	adult_message:
 			mov		edx, offset is_adult
 			call	WriteString
 			jmp		driver_message
+
 
 	driver_message:
 			mov		edx, offset is_driver
