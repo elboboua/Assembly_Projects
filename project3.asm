@@ -34,6 +34,11 @@ num_count	DWORD 0
 .code
 main PROC
 
+    call    greet
+    call    get_input
+    call    calculate
+    call    display_data
+
 	exit	; exit to operating system
 main ENDP
 
@@ -107,6 +112,19 @@ get_input PROC
 	
 	ret
 get_input ENDP
+
+
+; calculate avg
+calculate PROC
+
+    ret
+calculate ENDP
+
+; display required data
+display_data PROC
+
+    ret
+display_data ENDP
 
 
 END main
